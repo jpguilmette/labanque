@@ -19,7 +19,7 @@ const store = useAppStore();
         <div>
             <label for="theme">Thème</label>
             <div name="theme" id="theme">
-                <template v-for="theme in Object.values(Theme)">
+                <div v-for="theme in Object.values(Theme)">
                     <input
                         type="radio"
                         name="theme"
@@ -28,7 +28,7 @@ const store = useAppStore();
                         @change="store.changerTheme(theme)"
                     />
                     {{ theme }}
-                </template>
+                </div>
             </div>
         </div>
     </form>
